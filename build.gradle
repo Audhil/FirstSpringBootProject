@@ -14,6 +14,9 @@ repositories {
 
 dependencies {
 	implementation 'org.springframework.boot:spring-boot-starter-web'
+	//	to support .jsp
+	implementation 'org.apache.tomcat.embed:tomcat-embed-jasper:9.0.60'
+
 	testImplementation 'org.springframework.boot:spring-boot-starter-test'
 }
 
