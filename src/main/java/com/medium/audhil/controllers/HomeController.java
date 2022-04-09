@@ -1,5 +1,6 @@
 package com.medium.audhil.controllers;
 
+import com.medium.audhil.model.Alien;
 import org.springframework.stereotype.Controller;
 import org.springframework.web.bind.annotation.RequestMapping;
 import org.springframework.web.bind.annotation.RequestParam;
@@ -62,6 +63,14 @@ public class HomeController {
         ModelAndView mv = new ModelAndView();
         mv.addObject("name", myName);
         mv.setViewName("new_home");
+        return mv;
+    }
+
+    @RequestMapping("alien")
+    public ModelAndView alienFlow(Alien alien) {
+        ModelAndView mv = new ModelAndView();
+        mv.addObject("obj", alien);
+        mv.setViewName("alien");
         return mv;
     }
 }
